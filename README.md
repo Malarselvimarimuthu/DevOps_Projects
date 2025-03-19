@@ -9,3 +9,16 @@ Allow HTTP traffic (port 80) through the firewall using sudo ufw allow 80/tcp an
 Verify Nginx status using sudo systemctl status nginx --no-pager.
 After successfully building the project in Jenkins, I accessed Nginx’s default web page using http://127.0.0.1:80. Finally, I verified the installation using terminal commands and documented the process with screenshots.
 
+TASK2:
+# Dockerized CI/CD Pipeline with Jenkins
+
+This project automates the process of building, tagging, and pushing a Docker image to DockerHub using Jenkins.  
+The pipeline pulls source code from a GitHub repository, builds a Docker image, logs in to DockerHub, and pushes the image automatically.  
+
+## Workflow:
+1. **SCM Checkout** – Clones the latest code from the GitHub repository.  
+2. **Build Docker Image** – Creates a Docker image using the project's `Dockerfile`.  
+3. **Login to DockerHub** – Authenticates Jenkins with DockerHub using stored credentials.  
+4. **Push Docker Image** – Uploads the built image to DockerHub for further deployment.  
+
+This setup ensures a fully automated CI/CD workflow for containerized applications. 🚀
